@@ -1,10 +1,9 @@
 import Image from "next/image";
 import pizza from '../../../../public/pizza.png'
 
-
 export default function MenuItems() {
     return (
-        <div className="manu-carddiv-1 flex flex-col gap-4 items-center justify-center bg-gray-100 rounded p-4 hover:bg-white cursor-pointer shadow-xl hover:shadow-black/50 transition-all border-2 my-4">
+        <div className="manu-carddiv-1 flex flex-col gap-4 items-center justify-center bg-gray-100 rounded p-4 hover:bg-white cursor-pointer shadow-xl hover:shadow-black/50 transition-shadow border-2 my-4">
             <div className="pizza-img-div">
                 <Image src={pizza} alt="Pizza" width={200} height={200} />
             </div>

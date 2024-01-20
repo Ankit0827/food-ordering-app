@@ -4,12 +4,13 @@ import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
 import { User } from '../../../models/User'
 import bcrypt from 'bcrypt'
+import {environment} from '../../../../environments/environment.prod'
 
 
 // for authentication through next/auth
 const handler = NextAuth({
 
-  secret: "wueyiuwrifhjkcnbdjchuydvtuyvdhcasfty",
+  secret: environment.SECRET,
   providers: [
     CredentialsProvider({
       name: 'Credentials',
@@ -32,7 +33,7 @@ const handler = NextAuth({
 
         // mongoose connection
 
-        mongoose.connect("mongodb+srv://food-ordering-app:71Hu4LGIF3v5R5bd@cluster0.mfjjf9b.mongodb.net/food-ordering-app");
+        mongoose.connect(environment.MONGO_URL);
 
         const user = await User.findOne({email});
 

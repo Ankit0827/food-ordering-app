@@ -20,7 +20,7 @@ export default function HeroMenu() {
                 </div>
             </div>
 
-            <div className="MenuCard-div grid grid-cols-3 gap-4">
+            <div className="MenuCard-div grid grid-cols-3 gap-4 ">
                      <MenuItems/>
                      <MenuItems/>
                      <MenuItems/>
